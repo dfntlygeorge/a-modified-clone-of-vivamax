@@ -608,7 +608,7 @@ footer .container {
   padding: 0 2rem 2rem 2rem;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  max-width: 50%;
+  max-width: 40%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -622,6 +622,7 @@ footer .container {
 
 .popup-message h2 {
   margin-bottom: 1rem;
+  line-height: 2.5rem;
 }
 
 .popup-message a {
@@ -651,14 +652,14 @@ footer .container {
 @media (max-width: 700px) {
   .banner {
     flex-direction: column;
+  }
 
-    & > div {
-      flex: 0;
-    }
+  .banner > div {
+    flex: 0;
+  }
 
-    .text-container {
-      padding-top: 0;
-    }
+  .banner .text-container {
+    padding-top: 0;
   }
 
   .on-top {
@@ -679,5 +680,9 @@ footer .container {
 
   .faq {
     max-width: 90%;
+  }
+
+  .popup {
+    min-width: 80vw;
   }
 }
