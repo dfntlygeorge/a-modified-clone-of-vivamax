@@ -49,6 +49,7 @@ p {
 a {
   text-decoration: none;
   color: var(--primary-color);
+  cursor: pointer;
 }
 
 li {
@@ -121,6 +122,13 @@ button {
   padding-block: 5rem;
 }
 
+.opacity-hover {
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
 /* Header Styles */
 
 header {
@@ -137,7 +145,8 @@ nav {
 }
 
 .logo {
-  max-width: 5.5rem;
+  /* max-width: 5.5rem; */
+  max-width: clamp(4rem, 6vw, 5.5rem);
 }
 
 /* Hero Styles */
@@ -165,24 +174,23 @@ nav {
   padding-top: 10%;
   padding-inline: 2rem;
   text-align: center;
+}
 
-  & input,
-  button {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
-    padding: 1rem;
-  }
-  & input {
-    background-color: #20202067;
-    border: 0.1px solid #777676;
-    min-width: clamp(30%, 50%, 60%);
-    color: var(--primary-color);
-  }
-
-  .call-to-action {
-    margin-top: 1rem;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
+.call-to-action {
+  margin-top: 1rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.call-input,
+.call-button {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  padding: 1rem;
+}
+.call-input {
+  background-color: #20202067;
+  border: 0.1px solid #777676;
+  min-width: clamp(25vw, 30vw, 40vw);
+  color: var(--primary-color);
 }
 
 .hero-overlay {
@@ -220,9 +228,6 @@ nav {
 }
 
 /* Subscription Styles */
-#subscription {
-  margin-bottom: 6rem;
-}
 
 .options {
   gap: 2rem;
@@ -255,58 +260,155 @@ nav {
   left: 0;
 }
 
-/* dd-sub */
-
-.dd-container {
-  margin-block: 1rem;
-}
-
-select {
-  background-color: var(--secondary-color);
-  border: 0.1px solid #777676;
-  color: var(--primary-color);
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 0.3rem;
-  cursor: pointer;
-}
-
 /* plan cards */
 
 .cards-container {
-  flex-wrap: wrap;
-  padding-bottom: 1rem;
+  padding: 2rem;
 }
 
-.card {
-  border: 1px solid var(--primary-color);
+.wrapper {
+  width: 390px;
   background-color: var(--secondary-color);
-  color: var(--primary-color);
-  max-width: 30%;
-  text-align: justify;
-  border-radius: 10px;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 10px 10px 15px rgba(255, 255, 255, 0.05);
 }
-
-.price {
-  color: var(--yellow-btn);
-  font-weight: 500;
+.wrapper header {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  position: relative;
 }
-
-.frequency {
-  font-size: 1.1rem;
-  color: #ffffffb0;
+header label {
+  height: 100%;
+  z-index: 2;
+  width: 30%;
+  display: flex;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
 }
-.card-wrapper {
-  padding: 1rem 1.5rem;
+#tab-1:checked ~ header .tab-1,
+#tab-2:checked ~ header .tab-2,
+#tab-3:checked ~ header .tab-3 {
+  color: #fff;
 }
-
-.inclusion ul {
-  padding-inline: 1.4rem;
+header label:nth-child(2) {
+  width: 40%;
 }
-
-.inclusion li {
-  font-size: 1rem;
-  list-style-type: square;
+header .slider {
+  position: absolute;
+  height: 85%;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #0067c0 0%, #ffa500 100%);
+  transition: all 0.3s ease;
+}
+#tab-1:checked ~ header .slider {
+  left: 0%;
+  width: 90px;
+  transform: translateX(5%);
+}
+#tab-2:checked ~ header .slider {
+  left: 50%;
+  width: 120px;
+  transform: translateX(-50%);
+}
+#tab-3:checked ~ header .slider {
+  left: 100%;
+  width: 95px;
+  transform: translateX(-105%);
+}
+.wrapper input[type="radio"] {
+  display: none;
+}
+.card-area {
+  overflow: hidden;
+}
+.card-area .cards {
+  display: flex;
+  width: 300%;
+}
+.cards .row {
+  width: 33.4%;
+}
+.cards .row-1 {
+  transition: all 0.3s ease;
+}
+#tab-1:checked ~ .card-area .cards .row-1 {
+  margin-left: 0%;
+}
+#tab-2:checked ~ .card-area .cards .row-1 {
+  margin-left: -33.4%;
+}
+#tab-3:checked ~ .card-area .cards .row-1 {
+  margin-left: -66.8%;
+}
+.row .price-details {
+  margin: 20px 0;
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.price-details .price {
+  font-size: 65px;
+  font-weight: 600;
+  position: relative;
+}
+.price-details .price::before,
+.price-details .price::after {
+  position: absolute;
+  font-weight: 400;
+}
+.price-details .price::before {
+  content: "₱";
+  left: -13px;
+  top: 17px;
+  font-size: 20px;
+}
+.price-details .price::after {
+  content: "/mon";
+  right: -33px;
+  bottom: 17px;
+  font-size: 13px;
+}
+.price-details p {
+  font-size: 18px;
+  margin-top: 5px;
+}
+.row .features li {
+  display: flex;
+  font-size: 15px;
+  list-style: none;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.features li i {
+  background: linear-gradient(135deg, #ffa500 70%, #0067c0 30%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.features li span {
+  margin-left: 10px;
+}
+.wrapper button {
+  width: 100%;
+  border-radius: 25px;
+  height: 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #0067c0 0%, #ffa500 100%);
+  transition: transform 0.3s ease;
+}
+.wrapper button:hover {
+  transform: scale(0.98);
 }
 
 .notice-container p {
@@ -315,6 +417,19 @@ select {
 }
 
 /* how styles */
+
+.video-container {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.video-container iframe {
+  width: 75%;
+  height: 75%;
+  border: none;
+}
 
 .steps {
   flex-direction: column;
@@ -360,33 +475,164 @@ select {
 .payment-methods {
   margin: 0 auto;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.payment-app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 1rem;
+
+  & li {
+    list-style-type: disc;
+  }
 }
 
 .method-card {
-  border: 1px solid var(--primary-color);
-  max-width: 30%;
-  padding: 1rem;
+  border: 0.1px solid var(--primary-color);
+
+  max-width: 300px;
+  padding: 2rem;
+
+  & p {
+    font-size: 1rem;
+  }
 
   .method-title {
-    margin-bottom: 0.2rem;
+    padding: 1rem;
+
+    & span {
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
   }
   /* here ako natapos */
-  .method-desc {
-    text-align: start;
-  }
+}
 
-  .boldy {
-    font-weight: 500;
-  }
+.method-desc {
+  text-align: start;
+  color: #ccc;
+}
+
+.boldy {
+  font-weight: 500;
+  font-size: 1rem;
+  padding-block: 0.5rem;
+  color: var(--primary-color);
+}
+.underline-hover:hover {
+  text-decoration: underline;
 }
 
 .app-links-btns button {
   padding: 0;
 }
 
-.video-container {
-  padding-block: 2rem;
+.final-message {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 3rem;
 }
+
+.justify {
+  text-align: justify;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grey-box {
+  background-color: var(--secondary-color);
+  border-radius: 7px;
+  margin: 0 auto;
+  max-width: 550px;
+  padding: 1rem;
+  margin-block: 1rem;
+}
+
+/* faqs */
+
+#faq .container {
+  justify-content: center;
+}
+
+.faqs-container {
+  flex-direction: column;
+}
+
+.faq {
+  max-width: 70%;
+  gap: 1px;
+}
+
+.question {
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  & svg {
+    fill: var(--primary-color);
+  }
+
+  &:hover {
+    background-color: hsl(0, 0%, 24%);
+  }
+}
+
+.question {
+  background-color: #2d2d2d;
+  padding: 1.4rem 1rem;
+  /* border: 0.5px solid #ccc; */
+}
+
+.answer p {
+  margin: 1.4rem 1rem;
+}
+
+.answer {
+  max-height: 0;
+  background-color: #2d2d2d;
+  padding: 0;
+  overflow: hidden;
+  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq.active .answer {
+  max-height: 800px;
+  /* padding: 1.4rem 1rem; */
+}
+
+.faq svg {
+  transition: transform 0.4s ease-in;
+}
+
+.faq.active svg {
+  transform: rotate(180deg);
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* Footer Sheesh */
+
+footer {
+  padding-block: 5rem;
+}
+
+footer .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.privacy-links .flex,
+.socmed-links .flex {
+  gap: clamp(0.7rem, 4vw, 2rem);
+}
+
+.socmed-links span {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
 /* Responsiveness */
 
 @media (max-width: 1270px) {
@@ -412,9 +658,9 @@ select {
     }
   }
 
-  .logo {
+  /* .logo {
     max-width: 4rem;
-  }
+  } */
 
   .on-top {
     order: 1;
@@ -434,5 +680,9 @@ select {
 
   .step-wrapper {
     padding: 0.5rem;
+  }
+
+  .faq {
+    max-width: 90%;
   }
 }

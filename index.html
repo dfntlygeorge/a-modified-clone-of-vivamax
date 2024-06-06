@@ -13,7 +13,12 @@
     <header>
       <div class="container">
         <nav class="flex">
-          <a href="#"><img src="/images/logo.png" alt="" class="logo" /></a>
+          <a href="#"
+            ><img
+              src="/images/logo.png"
+              alt="a logo of the website with words 'viva' on top and 'max' on bottom"
+              class="logo"
+          /></a>
           <div class="flex">
             <button class="yellow-btn">Explore</button
             ><button class="blue-btn">Log In</button>
@@ -38,11 +43,11 @@
               membership.
             </p>
             <div class="call-to-action flex center">
-              <input type="email" placeholder="Enter your email" /><button
-                class="blue-btn"
-              >
-                Get Started
-              </button>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="call-input"
+              /><button class="blue-btn call-button">Get Started</button>
             </div>
           </div>
         </div>
@@ -99,103 +104,116 @@
             exclusive content.
           </p>
         </div>
-        <div class="plan">
-          <div class="options flex center">
-            <button class="base-plan transparent-btn plan-btn">
-              <p class="bold-text">Base Plan</p>
-              <img src="/images/plan1.png" alt="" />
-              <span class="underline"></span>
-            </button>
-            <button class="bundle-plan transparent-btn plan-btn">
-              <p class="bold-text">Bundle & Save!</p>
-              <img src="images/plan2.png" alt="" />
-              <span class="underline"></span>
-            </button>
-          </div>
-          <hr />
-          <div class="dd-sub-container flex center">
-            <div class="dd-container">
-              <select name="" class="duration">
-                <option class="option" value="1 Month">1 Month</option>
-                <option class="option" value="3 Months">3 Months</option>
-                <option class="option" value="6 Months">6 Months</option>
-                <option class="option" value="1 Year">1 Year</option>
-              </select>
-            </div>
-            <button class="blue-btn">Subscribe Now</button>
-          </div>
+        <div>
           <div class="cards-container flex center">
-            <div class="card">
-              <div class="card-wrapper">
-                <div class="card-title">
-                  <p>Monthly</p>
-                  <p class="price">P169.00</p>
-                  <p class="frequency">every month</p>
-                </div>
-                <div class="inclusion">
-                  <ul>
-                    <li>Access to Vivamax</li>
-                    <li>1 account</li>
-                    <li>5 connected devices</li>
-                    <li>1 device streaming at a time</li>
-                    <li>2 downloads per week</li>
-                    <li>Cast content to TV</li>
-                    <li>3 extra days for free</li>
-                    <small
-                      >*(For web purchase & voucher redemption, excluding
-                      PayPal)</small
-                    >
-                  </ul>
+            <div class="wrapper">
+              <input type="radio" name="slider" id="tab-1" />
+              <input type="radio" name="slider" id="tab-2" checked />
+              <input type="radio" name="slider" id="tab-3" />
+              <header>
+                <label for="tab-1" class="tab-1">Basic</label>
+                <label for="tab-2" class="tab-2">Bundle</label>
+                <label for="tab-3" class="tab-3">Family</label>
+                <div class="slider"></div>
+              </header>
+              <div class="card-area">
+                <div class="cards">
+                  <div class="row row-1">
+                    <div class="price-details">
+                      <span class="price">169</span>
+                      <p>Pasa sa single</p>
+                    </div>
+                    <ul class="features">
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>Access to Vivamax </span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i><span>1 Account</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span> 1 Device Streaming at a Time</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>1 Download per Week</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>Cast Content to TV</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <div class="price-details">
+                      <span class="price">219</span>
+                      <p>Not for single</p>
+                    </div>
+                    <ul class="features">
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>Access to Vivamax & Viva One (Ad-free) </span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i><span>2 Accounts</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>5 Connected Devices</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>2 Devices Streaming at a Time</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>2 Downloads per Week</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>Cast Content to TV</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <div class="price-details">
+                      <span class="price">269</span>
+                      <p>Para sa pamilyado</p>
+                    </div>
+                    <ul class="features">
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>Access to Vivamax & Viva One (Ad-free)</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i><span>2 Accounts</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>10 Connected Devices</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>4 Devices Streaming at a Time</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>Unlimited Downloads</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>Cast Content to TV</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i
+                        ><span>5 Extra Days for Free</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div class="card-wrapper">
-                <div class="card-title">
-                  <p>Monthly</p>
-                  <p class="price">P169.00</p>
-                  <p class="frequency">every month</p>
-                </div>
-                <div class="inclusion">
-                  <ul>
-                    <li>Access to Vivamax</li>
-                    <li>1 account</li>
-                    <li>5 connected devices</li>
-                    <li>1 device streaming at a time</li>
-                    <li>2 downloads per week</li>
-                    <li>Cast content to TV</li>
-                    <li>3 extra days for free</li>
-                    <small
-                      >*(For web purchase & voucher redemption, excluding
-                      PayPal)</small
-                    >
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-wrapper">
-                <div class="card-title">
-                  <p>Monthly</p>
-                  <p class="price">P169.00</p>
-                  <p class="frequency">every month</p>
-                </div>
-                <div class="inclusion">
-                  <ul>
-                    <li>Access to Vivamax</li>
-                    <li>1 account</li>
-                    <li>5 connected devices</li>
-                    <li>1 device streaming at a time</li>
-                    <li>2 downloads per week</li>
-                    <li>Cast content to TV</li>
-                    <li>3 extra days for free</li>
-                    <small
-                      >*(For web purchase & voucher redemption, excluding
-                      PayPal)</small
-                    >
-                  </ul>
-                </div>
-              </div>
+              <button>Choose plan</button>
             </div>
           </div>
           <div class="notice-container">
@@ -206,10 +224,12 @@
       </div>
     </section>
     <section id="how">
-      <div class="container text-center">
-        <h2>How to Subscribe</h2>
-        <div class="video-container">
-          <video controls src="videos/VIVAMAX_HOW_TO_SUBSCRIBE.mp4"></video>
+      <div class="container text-center border-bottom">
+        <div class="video-container flex center">
+          <h2>How to Subscribe</h2>
+          <iframe
+            src="https://drive.google.com/file/d/1Zo5vY3ii_CjvxZuQqAc2kHYQKyUSLOdN/preview"
+          ></iframe>
         </div>
         <div class="steps flex center">
           <div class="step flex">
@@ -245,31 +265,35 @@
             </div>
             <div class="method-desc">
               <p>Select a plan and pay via these options:</p>
-              <ul>
-                <li>PayMaya</li>
-                <li>PayPal</li>
-              </ul>
-              <ul>
-                <li>Gcash</li>
-                <li>Credit/Debit Card</li>
-              </ul>
+              <div class="payment-app">
+                <ul>
+                  <li>PayMaya</li>
+                  <li>PayPal</li>
+                </ul>
+                <ul>
+                  <li>Gcash</li>
+                  <li>Credit/Debit Card</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="method-card">
             <div class="method-title">
-              <span class="fa-solid fa-receipt"></span>
+              <span class="fa-solid fa-ticket"></span>
               <h3>Voucher Redemtion</h3>
             </div>
             <div class="method-desc">
               <p>
                 Redeem your Vivamax voucher code at
-                <a href="#" class="bold-text">www.vivamax.net/voucher</a>.
+                <a href="#" class="bold-text underline-hover"
+                  >www.vivamax.net/voucher</a
+                >.
               </p>
             </div>
           </div>
           <div class="method-card">
             <div class="method-title">
-              <span class="fa-solid fa-receipt"></span>
+              <span class="fa-solid fa-mobile"></span>
               <h3>In-App Purchase</h3>
             </div>
             <div class="method-desc">
@@ -277,7 +301,7 @@
                 Download the Vivamax mobile app from App Store, Google Play or
                 Huawei AppGallery, sign in and subscribe via the app.
               </p>
-              <p class="boldy">Get the Vivamax mobile app</p>
+              <h4 class="boldy">Get the Vivamax mobile app</h4>
               <div class="app-links-btns flex">
                 <button><img src="images/apple.png" alt="" /></button
                 ><button><img src="images/playstore.png" alt="" /></button
@@ -287,49 +311,291 @@
           </div>
         </div>
         <div class="final-message">
-          <p>
-            Setup your account, if needed and you're all set! You can now enjoy
-            unlimited access to all content.
-          </p>
-          <p>
-            Start streaming by logging in on the Vivamax mobile app or on your
-            computer at <a href="#">www.vivamax.net</a>
-          </p>
-          <div class="grey-box">
+          <div class="justify flex">
             <p>
-              For bundle subscribers, you can use your Vivamax account email
-              address and password to log in to Viva One and start streaming
+              Setup your account, if needed and you're all set! You can now
+              enjoy unlimited access to all content.
+            </p>
+            <p>
+              Start streaming by logging in on the Vivamax mobile app or on your
+              computer at
+              <a href="#" class="bold-text underline-hover">www.vivamax.net</a>
             </p>
           </div>
-          <button class="blue-btn center-by-margin">Subscribe Now</button>
+        </div>
+        <div class="grey-box">
+          <p>
+            For bundle subscribers, you can use your Vivamax account email
+            address and password to log in to Viva One and start streaming
+          </p>
+        </div>
+        <div class="call-to-action flex center">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="call-input"
+          /><button class="blue-btn call-button">Get Started</button>
+        </div>
+      </div>
+    </section>
+    <section id="faq">
+      <div class="container border-bottom flex column">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <div class="faqs-container flex center">
+          <div class="faq flex column">
+            <div class="question flex">
+              <p class="large-p">What is Vivamax?</p>
+              <svg
+                fill="#fff"
+                height="16px"
+                width="16px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+              >
+                <path
+                  id="XMLID_225_"
+                  d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+            c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+            s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                />
+              </svg>
+            </div>
+            <div class="answer">
+              <p class="large-p">
+                Vivamax is a subscription based, video on-demand app that
+                features your favorite blockbuster Pinoy and foreign movies, TV
+                series, documentaries, concerts, stand-up comedies, fitness &
+                workout shows, sports & genre-bending exclusives that are ALL
+                proudly Filipino made.
+              </p>
+            </div>
+          </div>
+          <div class="faq flex column">
+            <div class="question flex">
+              <p class="large-p">How can I access Vivamax?</p>
+              <svg
+                fill="#fff"
+                height="16px"
+                width="16px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+              >
+                <path
+                  id="XMLID_225_"
+                  d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+            c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+            s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                />
+              </svg>
+            </div>
+            <div class="answer">
+              <p class="large-p">
+                You can access Vivamax through its website or by downloading the
+                Vivamax app from the Google Play Store or Apple App Store on
+                your smartphone, tablet, or smart TV.
+              </p>
+            </div>
+          </div>
+          <div class="faq flex column">
+            <div class="question flex">
+              <p class="large-p">What kind of content does Vivamax offer?</p>
+              <svg
+                fill="#fff"
+                height="16px"
+                width="16px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+              >
+                <path
+                  id="XMLID_225_"
+                  d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+            c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+            s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                />
+              </svg>
+            </div>
+            <div class="answer">
+              <p class="large-p">
+                Vivamax offers a diverse selection of content, including
+                blockbuster movies, classic films, indie gems, TV series,
+                documentaries, and exclusive original content produced by
+                Vivamax.
+              </p>
+            </div>
+          </div>
+          <div class="faq flex column">
+            <div class="question flex">
+              <p class="large-p">Is Vivamax available worldwide?</p>
+              <svg
+                fill="#fff"
+                height="16px"
+                width="16px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+              >
+                <path
+                  id="XMLID_225_"
+                  d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+            c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+            s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                />
+              </svg>
+            </div>
+            <div class="answer">
+              <p class="large-p">
+                Vivamax is available for streaming worldwide, allowing Filipino
+                viewers around the globe to enjoy their favorite movies and
+                shows anytime, anywhere.
+              </p>
+            </div>
+          </div>
+          <div class="faq flex column">
+            <div class="question flex">
+              <p class="large-p">
+                Are there subscription plans available for Vivamax?
+              </p>
+              <svg
+                fill="#fff"
+                height="16px"
+                width="16px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+              >
+                <path
+                  id="XMLID_225_"
+                  d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+            c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+            s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                />
+              </svg>
+            </div>
+            <div class="answer">
+              <p class="large-p">
+                Yes, Vivamax offers subscription plans with flexible pricing
+                options to suit different viewing preferences and budgets.
+                Subscribers can choose between monthly, quarterly, or annual
+                plans.
+              </p>
+            </div>
+          </div>
+          <div class="faq flex column">
+            <div class="question flex">
+              <p class="large-p">Can I watch content offline on Vivamax?</p>
+              <svg
+                fill="#fff"
+                height="16px"
+                width="16px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+              >
+                <path
+                  id="XMLID_225_"
+                  d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+            c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+            s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                />
+              </svg>
+            </div>
+            <div class="answer">
+              <p class="large-p">
+                Yes, Vivamax allows subscribers to download their favorite
+                movies and shows for offline viewing. This feature is
+                particularly useful for users who want to watch content without
+                an internet connection.
+              </p>
+            </div>
+          </div>
+          <div class="faq flex column">
+            <div class="question flex">
+              <p class="large-p">Does Vivamax offer ad-supported viewing?</p>
+              <svg
+                fill="#fff"
+                height="16px"
+                width="16px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+              >
+                <path
+                  id="XMLID_225_"
+                  d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+            c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+            s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                />
+              </svg>
+            </div>
+            <div class="answer">
+              <p class="large-p">
+                Vivamax primarily operates on a subscription-based model and
+                does not offer ad-supported viewing. However, occasional
+                promotional offers or free trials may be available to new users.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <div class="container">
+      <div class="container flex">
         <a href="#" class="logo"><img src="images/logo.png" alt="" /></a>
         <div class="privacy-links">
           <ul class="flex">
-            <li><a href="#"></a>Help</li>
-            <li><a href="#"></a>Privacy</li>
-            <li><a href="#"></a>Terms</li>
+            <li>
+              <a href="#" class="opacity-hover"><p>Help</p></a>
+            </li>
+            <li>
+              <a href="#" class="opacity-hover"><p>Privacy</p></a>
+            </li>
+            <li>
+              <a href="#" class="opacity-hover"> <p>Terms</p></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="socmed-links">
+          <ul class="flex">
+            <li><a href="#"></a><span class="fa-brands fa-facebook"></span></li>
+            <li>
+              <a href="#"></a
+              ><span class="fa-brands fa-square-x-twitter"></span>
+            </li>
+            <li>
+              <a href="#"></a
+              ><span class="fa-brands fa-square-instagram"></span>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="socmed-links">
-        <ul>
-          <li><a href="#"></a><span class="fa-brands fa-facebook"></span></li>
-          <li>
-            <a href="#"></a><span class="fa-brands fa-square-x-twitter"></span>
-          </li>
-          <li>
-            <a href="#"></a><span class="fa-brands fa-square-instagram"></span>
-          </li>
-        </ul>
-      </div>
     </footer>
     <script src="script.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/34c7355fdd.js"></script> -->
+    <script src="https://kit.fontawesome.com/34c7355fdd.js"></script>
   </body>
 </html>

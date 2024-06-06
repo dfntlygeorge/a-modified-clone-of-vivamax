@@ -15,3 +15,22 @@ buttons.forEach((button) => {
     button.style.opacity = "1";
   });
 });
+
+const faqs = document.querySelectorAll(".faq");
+
+faqs.forEach((faq) => {
+  faq.addEventListener("click", () => {
+    // Check if the clicked FAQ is already active
+    const isActive = faq.classList.contains("active");
+
+    // Remove active class from all FAQs
+    faqs.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    // If the clicked FAQ was not active, activate it
+    if (!isActive) {
+      faq.classList.add("active");
+    }
+  });
+});
